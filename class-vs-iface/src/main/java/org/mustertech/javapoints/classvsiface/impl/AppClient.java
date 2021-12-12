@@ -2,11 +2,11 @@ package org.mustertech.javapoints.classvsiface.impl;
 
 import org.mustertech.javapoints.classvsiface.Authenticator;
 
-public class ClientAuthenticator implements Authenticator {
+public class AppClient implements Authenticator {
 	private String clientId;
 	private String clientSecret;
 
-	ClientAuthenticator(String clientId, String clientSecret) {
+	AppClient(String clientId, String clientSecret) {
 		this.clientId = clientId;
 		this.clientSecret = clientSecret;
 	}
