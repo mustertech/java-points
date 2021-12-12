@@ -1,6 +1,7 @@
 package org.mustertech.javapoints.classvsiface;
 
-interface Authenticator {
+public interface Authenticator {
 	boolean authenticate(final String secret);
-	String hashedSecret(final String secret);
+
+	String identifier();
 }

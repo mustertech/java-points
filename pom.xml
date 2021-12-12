@@ -179,6 +179,6 @@
 	</build>
 
 	<modules>
-		<module>entities</module>
+		<module>class-vs-iface</module>
 	</modules>
 </project>
