@@ -1,27 +1,35 @@
 package org.mustertech.javapoints.classvsiface.impl;
 
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.AbstractMap;
 import java.util.Map;
 
 import org.mustertech.javapoints.classvsiface.User;
 import at.favre.lib.crypto.bcrypt.BCrypt;
 
-public class SalesUser extends User {
-	private int targetedConversions = 100;
+public class LeadUser extends User {
+	private String createdAt;
 
-	public SalesUser(String email, String phone, String plainPassCode) {
+	public LeadUser(String email, String phone, String plainPassCode) {
 		super();
 
-		this.name = "Sales User";
-		this.intro = "Sales user of Acme company";
+		this.name = "Unknown";
+		this.intro = "Lead user";
 		this.email = email;
 		this.phone = phone;
 		this.passCode = BCrypt.withDefaults().hashToString(12, plainPassCode.toCharArray());
+
+		Instant nowUtc = Instant.now();
+		ZoneId utcZone = ZoneId.of("UTC");
+
+		this.createdAt = ZonedDateTime.ofInstant(nowUtc, utcZone).toString();
 	}
 
 	@Override
-	public Map<String, String> userDetails(String email) {
-		if (!email.equals(this.email)) {
+	public Map<String, String> userDetails(String userId) {
+		if (!userId.equals(this.email) || !userId.equals(this.phone)) {
 			return null;
 		}
 
@@ -30,8 +38,13 @@ public class SalesUser extends User {
 				new AbstractMap.SimpleEntry<String, String>("intro", this.intro),
 				new AbstractMap.SimpleEntry<String, String>("email", this.email),
 				new AbstractMap.SimpleEntry<String, String>("phone", this.phone),
-				new AbstractMap.SimpleEntry<String, String>("targetConversions", String.valueOf(targetedConversions)));
+				new AbstractMap.SimpleEntry<String, String>("createdAt", this.createdAt));
 
 		return result;
+	}
+
+	@Override
+	public String identifier() {
+		return this.phone;
 	}
 }
