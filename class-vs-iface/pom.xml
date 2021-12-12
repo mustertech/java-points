@@ -24,7 +24,6 @@
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
-	<groupId>org.mustertech</groupId>
 	<artifactId>jp-class-vs-iface</artifactId>
 	<packaging>jar</packaging>
 	<name>Class-Vs-Interface</name>

@@ -1,4 +1,4 @@
-module javapoints.classvsiface {
+module org.mustertech.javapoints.classvsiface {
 	requires bcrypt;
 
 	exports org.mustertech.javapoints.classvsiface;
