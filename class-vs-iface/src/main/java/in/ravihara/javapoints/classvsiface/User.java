@@ -1,4 +1,4 @@
-package org.mustertech.javapoints.classvsiface;
+package in.ravihara.javapoints.classvsiface;
 
 import java.util.Map;
 import at.favre.lib.crypto.bcrypt.BCrypt;

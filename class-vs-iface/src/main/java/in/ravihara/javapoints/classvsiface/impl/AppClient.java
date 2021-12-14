@@ -1,6 +1,6 @@
-package org.mustertech.javapoints.classvsiface.impl;
+package in.ravihara.javapoints.classvsiface.impl;
 
-import org.mustertech.javapoints.classvsiface.Authenticator;
+import in.ravihara.javapoints.classvsiface.Authenticator;
 
 public class AppClient implements Authenticator {
 	private String clientId;

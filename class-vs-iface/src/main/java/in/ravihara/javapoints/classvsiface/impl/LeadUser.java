@@ -1,4 +1,4 @@
-package org.mustertech.javapoints.classvsiface.impl;
+package in.ravihara.javapoints.classvsiface.impl;
 
 import java.time.Instant;
 import java.time.ZoneId;
@@ -6,7 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.AbstractMap;
 import java.util.Map;
 
-import org.mustertech.javapoints.classvsiface.User;
+import in.ravihara.javapoints.classvsiface.User;
 import at.favre.lib.crypto.bcrypt.BCrypt;
 
 public class LeadUser extends User {

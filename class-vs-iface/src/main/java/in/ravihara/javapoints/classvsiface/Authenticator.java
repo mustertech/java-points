@@ -1,4 +1,4 @@
-package org.mustertech.javapoints.classvsiface;
+package in.ravihara.javapoints.classvsiface;
 
 public interface Authenticator {
 	boolean authenticate(final String secret);

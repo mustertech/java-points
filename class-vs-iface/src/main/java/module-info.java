@@ -1,6 +1,6 @@
-module org.mustertech.javapoints.classvsiface {
+module in.ravihara.javapoints.classvsiface {
 	requires bcrypt;
 
-	exports org.mustertech.javapoints.classvsiface;
-	exports org.mustertech.javapoints.classvsiface.impl;
+	exports in.ravihara.javapoints.classvsiface;
+	exports in.ravihara.javapoints.classvsiface.impl;
 }

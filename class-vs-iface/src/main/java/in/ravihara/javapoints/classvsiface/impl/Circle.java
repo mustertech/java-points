@@ -1,6 +1,6 @@
-package org.mustertech.javapoints.classvsiface.impl;
+package in.ravihara.javapoints.classvsiface.impl;
 
-import org.mustertech.javapoints.classvsiface.Shape;
+import in.ravihara.javapoints.classvsiface.Shape;
 
 public class Circle extends Shape {
 	private double radius;
